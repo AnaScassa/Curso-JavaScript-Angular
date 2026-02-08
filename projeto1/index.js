@@ -45,3 +45,43 @@ function percentage10(price){
 }
 
 console.log(percentage10(20));
+
+// atribuição
+let x = 10;
+x += 5; // x = x + 5
+console.log(x);
+
+// comparação
+let a = '1';
+let b = 1;
+// em js são 4 tipos de comparação: ==, ===, !=, !==
+// == compara apenas o valor, === compara o valor e o tipo
+console.log(a === b); // strict (valor e tipo)
+console.log(a == b); // loose (apenas valor, faz coerção de tipo)
+
+// operador ternário
+let age2 = 18;
+let canVote = (age2 >= 18) ? "Yes, you can vote!" : "No, you cannot vote.";
+console.log(canVote);
+
+// for in loop
+const myCar = {
+    model: "Toyota",
+    year: 2020,
+    color: "red"
+};
+for (let i in myCar) { 
+// i vai receber as variaveis do objeto myCar, ou seja, model, year e color
+    console.log(i + ": " + myCar[i]);
+} 
+
+// for of loop
+const myArray = ["apple", "banana", "cherry"];
+for (let fruit of myArray) { 
+// fruit vai receber os valores do array, ou seja, apple, banana e cherry
+    console.log(fruit);
+}
+
+// pegando elemento do HTML e atualizando seu conteúdo
+// innerHTML é uma propriedade que permite acessar ou modificar o conteúdo HTML de um elemento
+document.getElementById("output").innerHTML = "texto atualizado pelo JavaScript!";
