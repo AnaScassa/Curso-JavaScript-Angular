@@ -1,33 +1,31 @@
-let bookTitle;
-let bookAuthor;
-let publicationYear;
-let bookPages;
-let bookChapters;
-
-function createBook(bookTitle, bookAuthor, publicationYear, bookPages, bookChapters) {
-    let book = {
-        title: bookTitle,
-        author: bookAuthor,
-        publicationYear: publicationYear,
-        pages: bookPages,
-        bookChapters: bookChapters,
-
-        printBook: function() {
-        console.log(`Title: ${book.title}`);
-        console.log(`Author: ${book.author}`);
-        console.log(`Publication Year: ${book.publicationYear}`);
-        console.log(`Pages: ${book.pages}`);
-        }
-    }
-    return book;
+// cria um objeto livro usando uma função de fábrica
+function createBook(title, author, year, pages, chapters) {
+  return {
+    title,
+    author,
+    year,
+    pages,
+    chapters
+  }
 }
 
-// instanciando um objeto
-const book1 = createBook("The Great Gatsby", "F. Scott Fitzgerald", 1925, 180, ["Chapter 1", "Chapter 2", "Chapter 3"]);
-const book2 = createBook("To Kill a Mockingbird", "Harper Lee", 1960, 281, ["Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4"]);
+// adiciona um listener para o formulário de livro
+document.getElementById("bookForm").addEventListener("submit", function (e) {
+  e.preventDefault() // impede recarregar a página
 
-book2.color = "blue"; // Adicionando uma nova propriedade ao objeto book2
+  // obtém os valores dos campos do formulário
+  const title = document.getElementById("title").value
+  const author = document.getElementById("author").value
+  const year = document.getElementById("publicationYear").value
+  const pages = document.getElementById("pages").value
+  const chapters = document.getElementById("chapters").value
 
-book1.printBook();
-book2.printBook();
-console.log(book1);
+  // instancia o objeto
+  const book = createBook(title, author, year, pages, chapters)
+
+  // exibe o resultado na página
+  document.getElementById("result").innerText =
+    `Livro adicionado: ${book.title} - ${book.author}`
+
+  console.log(book)
+})
