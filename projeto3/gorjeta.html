@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <div class="containerCalculadora">
+        <h1>Calculadora de gorjeta</h1>
+
+        <form id="calculadora">
+            <input type="number" id="numero1" placeholder="Número de pessoas" required>
+            <input type="number" id="numero2" placeholder="Valor da conta" required>
+            <input type="number" id="gorjeta" placeholder="Gorjeta %" required>
+
+            <button type="submit" onclick="gorjeta()">Calcular</button>
+
+            <p id="resultado2"></p>
+        </form>
+    </div>
+    <style>
+        .body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .containerCalculadora {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        input,
+        select,
+        button {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        #resultado {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+    <script src="script.js"></script>
+</body>
+
+</html>

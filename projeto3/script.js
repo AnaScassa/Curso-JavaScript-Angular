@@ -24,5 +24,17 @@ function calcular() {
 }
 
 document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault();
+  event.preventDefault();
+  gorjeta();
 });
+
+function gorjeta() {
+  let numero1 = parseFloat(document.getElementById('numero1').value);
+  let numero2 = parseFloat(document.getElementById('numero2').value);
+  let gorjeta = parseFloat(document.getElementById('gorjeta').value);
+
+  let resultado2 = (((gorjeta * numero2) / 100) + numero2) / numero1;
+
+  document.getElementById('resultado2').innerHTML =
+    'Valor por pessoa: R$ ' + resultado2.toFixed(2);
+}
