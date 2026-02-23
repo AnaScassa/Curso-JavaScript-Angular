@@ -1,0 +1,17 @@
+.input-wrapper{
+    color: #555555;
+    font-size: 16px;
+    text-align: start;
+
+    label{
+        margin-bottom: 10px;
+    }
+
+    input{
+        border: none;
+        border-radius: 8px;
+        background-color: lightgray;
+        padding: 12px 0 12px 20px;
+        width: 100%;
+    }
+}
